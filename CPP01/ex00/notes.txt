@@ -1,0 +1,42 @@
+Choice Between Stack and Heap Allocation
+
+Stack Allocation:
+
+Pros:
+Faster allocation and deallocation compared to heap.
+Automatically managed by the system (no need to explicitly delete).
+Simplifies memory management since destruction is automatic when the variable goes out of scope.
+
+Cons:
+Limited stack size; large objects or many allocations can cause stack overflow.
+Not suitable for large objects or objects with long lifetimes.
+
+Heap Allocation:
+
+Pros:
+Allows dynamic allocation of memory, not limited by stack size.
+Objects can live beyond the scope where they were created (e.g., returning objects from functions).
+
+Cons:
+Slower allocation and deallocation due to the need for manual management (new and delete).
+Potential for memory leaks if not managed properly (e.g., forgetting to delete allocated memory).
+Choosing Between Stack and Heap for Zombies:
+
+For newZombie:
+
+Heap allocation (new) is appropriate because it returns a pointer to the zombie that can be used outside 
+the function scope.
+
+For randomChump:
+
+Stack allocation is appropriate because the zombie is local to the function and does not need to persist 
+beyond its scope.
+
+Conclusion:
+
+Stack is preferred when the object's lifetime is well-defined and relatively short (like in randomChump).
+Heap is preferred when objects need to persist beyond their creation scope or when their size might exceed
+typical stack limits (like in newZombie).
+In summary, understanding the context and lifetime requirements of objects (like our zombies) helps in 
+deciding whether to allocate them on the stack or the heap. Each method has its advantages and considerations 
+related to performance and memory management.
