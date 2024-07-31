@@ -1,19 +1,20 @@
-SRC = main.cpp Zombie.cpp zombieHorde.cpp
-OBJ = $(SRC:.cpp=.o)
+NAME = harl
+
+SRCS = main.cpp Harl.cpp
+OBJS = $(SRCS:.cpp=.o)
+
 CC = g++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
-NAME = zombie
-
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
+$(NAME): $(OBJS)
+	$(CC) $(CPPFLAGS) $(OBJS) -o $(NAME)
 	@clear
 
 clean:
-	$(RM) $(OBJ)
+	$(RM) $(OBJS)
 	@clear
 
 fclean: clean
