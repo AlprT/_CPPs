@@ -11,10 +11,10 @@ void Zombie::announce(void)
 Zombie::Zombie(string name)
 {
     this -> m_name = name;
-    cout << "Zombie " << this -> m_name << "is woke up" << endl;
+    cout << "Zombie " << this -> m_name << " is woke up" << endl;
 }
 
 Zombie::~Zombie()
 {
-    cout << "Zombie " << this -> m_name << "is DED" << endl;
+    cout << "Zombie " << this -> m_name << " is DED" << endl;
 }
