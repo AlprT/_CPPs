@@ -39,4 +39,3 @@ void Fixed::setRawBits(int const raw) {
     cout << YELLOW << "setRawBits member function" << RESET << " called" << endl;
     m_val = raw;
 }
-

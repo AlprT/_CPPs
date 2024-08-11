@@ -21,20 +21,14 @@ Fixed &Fixed::operator=(const Fixed &other) {
     return *this;
 }
 
-int Fixed::getRawBits(void) const {
-    cout << YELLOW << "getRawBits member function" << RESET << " called" << endl;
-    return m_val;
-}
+int Fixed::getRawBits(void) const { return m_val; }
 
-void Fixed::setRawBits(int const raw) {
-    cout << YELLOW << "setRawBits member function" << RESET << " called" << endl;
-    m_val = raw;
-}
+void Fixed::setRawBits(int const raw) { m_val = raw; }
 
 // it shifts the value to the left by 8, so it multiplies the value by 2^8
 // we basicly put the value in the fixed point format
 Fixed::Fixed(const int val) : m_val(val << m_frac) {
-    cout << GREEN << "Int constructor" RESET " called" << endl;
+    cout << GREEN << "Int constructor" << RESET << " called" << endl;
 }
 
 // it rounds the value to the nearest integer and shifts the value to the left by 8
