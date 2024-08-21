@@ -4,6 +4,7 @@
 #define Y "\033[33m"
 #define RE "\033[0m"
 #define R "\033[31m"
+#define G "\033[32m"
 
 #include <iostream>
 
@@ -13,7 +14,7 @@ using std::string;
 
 class ClapTrap
 {
-    private:
+    protected:
         string _Name;
         unsigned int _HP;
         unsigned int _Energy;
@@ -22,7 +23,7 @@ class ClapTrap
         ClapTrap();
         ClapTrap(string name);
         ClapTrap(const ClapTrap &copy);
-        ~ClapTrap();
+        virtual ~ClapTrap();
 
         ClapTrap &operator = (const ClapTrap &copy);
 

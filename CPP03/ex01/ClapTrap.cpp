@@ -2,30 +2,33 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap() : _Name("ClapTrap"), _HP(10), _Energy(10), _ATK(0) {
-    cout << "ClapTrap " << this -> _Name << " is created!" << endl;
+    cout << "ClapTrap " << Y << this -> _Name << RE << " is " << G << "created!" << RE << endl;
 }
 
 ClapTrap::ClapTrap(string name) : _Name(name), _HP(10), _Energy(10), _ATK(0) {
-    cout << "ClapTrap " << this -> _Name << " is created!" << endl;
+    cout << "ClapTrap " << Y << this -> _Name << RE << " is " << G << "created!"<< RE << endl;
 }
 
 ClapTrap::~ClapTrap() {
-    cout << "ClapTrap " << this -> _Name << " is destroyed!" << endl;
+    cout << "ClapTrap " << Y << this -> _Name << RE << " is " << R << "destroyed!" << RE << endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy)
 {
-    cout << "ClapTrap " << this -> _Name << " is copied!" << endl;
+    cout << "ClapTrap " << Y << this -> _Name << RE << " is copied!" << endl;
     *this = copy;
 }
 
-ClapTrap &ClapTrap::operator = (const ClapTrap &copy)
+ClapTrap &ClapTrap::operator=(const ClapTrap &copy)
 {
-    this -> _Name = copy._Name;
-    this -> _HP = copy._HP;
-    this -> _Energy = copy._Energy;
-    this -> _ATK = copy._ATK;
-    return (*this);
+    if (this != &copy)
+    {
+        this -> _Name = copy._Name;
+        this -> _HP = copy._HP;
+        this -> _Energy = copy._Energy;
+        this -> _ATK = copy._ATK;
+    }
+    return *this;
 }
 
 void ClapTrap::attack(string const &target)
@@ -58,7 +61,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-    if (this -> _Energy != 0 && this -> _HP != 0 && this -> _HP <= 10)
+    if (this -> _Energy != 0 && this -> _HP != 0)
     {
         this -> _HP += amount;
         cout << "ClapTrap " << Y << this -> _Name << RE << " is healed for " << amount << 
