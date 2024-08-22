@@ -23,7 +23,7 @@ class ClapTrap
         ClapTrap();
         ClapTrap(string name);
         ClapTrap(const ClapTrap &copy);
-        ~ClapTrap();
+        virtual~ClapTrap();
 
         ClapTrap &operator = (const ClapTrap &copy);
 

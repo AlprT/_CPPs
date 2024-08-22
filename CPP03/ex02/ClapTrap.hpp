@@ -14,7 +14,7 @@ using std::string;
 
 class ClapTrap
 {
-    private:
+    protected:
         string _Name;
         unsigned int _HP;
         unsigned int _Energy;

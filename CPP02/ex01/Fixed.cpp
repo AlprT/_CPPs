@@ -33,13 +33,9 @@ Fixed::Fixed(const int val) : m_val(val << m_frac) {
 
 // it rounds the value to the nearest integer and shifts the value to the left by 8
 // we basicly put the value in the fixed point format by multiplying it by 2^8
-Fixed::Fixed(const float val) : m_val(roundf(val * (1 << m_frac))) {
+Fixed::Fixed(const float val) : m_val((int)roundf(val * (1 << m_frac))) {
     cout << GREEN << "Float constructor" << RESET << " called" << endl;
 }
-
-//we multiply the value by 2^8 to get the fixed point value
-//so no matter if the value is an int or a float, program will use them in the same format
-
 
 // we divide the value by 2^8 to get the original value
 float Fixed::toFloat(void) const {

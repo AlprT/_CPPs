@@ -1,5 +1,6 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main()
 {
@@ -51,6 +52,26 @@ int main()
 		b.highFivesGuys();
 		b.takeDamage(7);
 		b.beRepaired(35);
+		cout << endl;
+	}
+	cout << endl << R << "DiamondTrap tests:" << RE << endl;
+	{
+		DiamondTrap a;
+		DiamondTrap b("Napoleon"); 
+
+		cout << endl;
+		a.attack("Emanuel");
+		a.highFivesGuys();
+		a.highFivesGuys();
+		a.takeDamage(7);
+		a.beRepaired(5);
+		b.attack("Karen");
+		b.highFivesGuys();
+		b.highFivesGuys();
+		b.takeDamage(7);
+		b.beRepaired(35);
+		a.whoAmI();
+		b.whoAmI();
 		cout << endl;
 	}
 }

@@ -1,11 +1,11 @@
 NAME = ClapTrap
 
-SRCS = ClapTrap.cpp ScavTrap.cpp FragTrap.cpp main.cpp
+SRCS = ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 CC = c++
 RM = rm -f
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+CPPFLAGS = -Wall -Werror -Wextra -std=c++98 -pedantic
 
 all: $(NAME)
 

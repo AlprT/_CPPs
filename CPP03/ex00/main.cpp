@@ -2,17 +2,18 @@
 
 int main()
 {
-	cout << endl;
+	cout << R << "ClapTrap tests:" << RE << endl;
+	{
+		ClapTrap a;
+		ClapTrap b("Cody");
 
-	ClapTrap a;
-	ClapTrap b("Cody");
-
-	cout << endl;
-	a.attack("Cody");
-	a.beRepaired(5);
-	b.attack("John");
-	b.takeDamage(7);
-	b.beRepaired(35);
-	cout << endl;
-	return (0);
+		cout << endl;
+		a.attack("Emanuel");
+		a.takeDamage(7);
+		a.beRepaired(5);
+		b.attack("Karen");
+		b.takeDamage(7);
+		b.beRepaired(35);
+		cout << endl;
+	}
 }
